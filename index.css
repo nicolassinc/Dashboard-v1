@@ -1,0 +1,178 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React from 'react';
+import { personalData } from '../data';
+
+export default function PersonalProfile() {
+  return (
+    <div className="p-4 sm:p-6 space-y-4 sm:space-y-6 animate-in fade-in duration-300">
+      
+      {/* Upper Grid: Professional Presentation & Ficha Cadastral */}
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        
+        {/* Profile Card and Bio (3/5 columns) - Pure Elegant Text Typography */}
+        <div className="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm shadow-slate-100 lg:col-span-3 flex flex-col justify-between select-none">
+          <div className="space-y-5">
+            <div className="border-b border-slate-100 pb-3">
+              <h3 className="font-sora font-extrabold text-[#1e1b4b] text-base leading-none">
+                Apresentação Profissional
+              </h3>
+              <span className="text-[10px] uppercase font-mono font-extrabold tracking-wider text-indigo-500 mt-1.5 block">
+                Síntese Executiva & Perfil Multidisciplinar
+              </span>
+            </div>
+
+            {/* Professionally structured profile sections */}
+            <div className="space-y-5 text-slate-650 text-xs leading-relaxed font-medium">
+              
+              <div className="space-y-2">
+                <h4 className="text-[10px] uppercase font-bold text-slate-400 tracking-wider font-mono">
+                  Sumário Executivo
+                </h4>
+                <p className="text-justify">
+                  Profissional com sólida trajetória de mais de 7 anos nas esferas Administrativa e Financeira, acumulando experiência prática em ambientes corporativos de alto rigor operacional e volume de transações. Sólido histórico no faturamento hospitalar da <strong>Santa Casa de Misericórdia da Bahia</strong> e em auditoria técnica e precificação de odds em plataformas de entretenimento digital de alcance nacional, aliando dinamismo à precisão matemática de mercado.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="text-[10px] uppercase font-bold text-slate-400 tracking-wider font-mono">
+                  Expertise Operacional & Compliance
+                </h4>
+                <p className="text-justify">
+                  Ampla proficiência na gestão centralizada de contas a pagar para múltiplos CNPJs, controle minucioso de fluxos de caixa, conciliação multibancária e faturamento eletrônico de operadoras de saúde em estrita conformidade com os padrões XML TISS/TUSS. Amplo domínio na auditoria de contratos complexos, controle financeiro de carteiras ativas, gestão burocrática de pós-venda, análise crítica de garantias societárias e suporte analítico de negócios.
+                </p>
+                <p className="text-justify">
+                  Especialista na extração, compilação e auditoria de Indicadores Chave de Desempenho (KPIs) voltados a vendas de serviços e proteções securitárias, emitindo relatórios estratégicos estruturados de suporte à tomada de decisão para equipes comerciais e diretorias regionais.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <h4 className="text-[10px] uppercase font-bold text-slate-400 tracking-wider font-mono">
+                  Formação Acadêmica & Capacitação Avançada
+                </h4>
+                <p className="text-justify">
+                  Buscando a convergência entre governança corporativa e engenharia de finanças, cursa em concomitância os bacharelados em <strong>Administração de Empresas</strong> e <strong>Gestão Financeira</strong> pela UNIFATECIE. Complementa sua sólida formação com qualificações em Power BI, Excel Avançado e Matemática Financeira com uso da calculadora HP 12C pela Fundação Bradesco, além de engenharia de prompt e fluxos automatizados de Inteligência Artificial pela plataforma DIO.me.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="bg-slate-50 border border-slate-200/60 p-4 rounded-xl mt-6">
+            <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider font-mono mb-1.5">
+              Diretrizes de Contratação & Alocação
+            </div>
+            <div className="text-xs text-slate-600 font-semibold leading-relaxed space-y-1">
+              <div>
+                <span className="text-slate-400 font-medium">Pretensão Salarial:</span> {personalData.salaryExpectation} (Regime CLT ou equivalente PJ)
+              </div>
+              <div>
+                <span className="text-slate-400 font-medium">Disponibilidade:</span> Início imediato
+              </div>
+              <div>
+                <span className="text-slate-400 font-medium">Mobilidade Geográfica:</span> Salvador, Região Metropolitana ou regime de trabalho 100% Home Office / Híbrido
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Informações Pessoais & Diversidade (2/5 columns) - Pure Elegant Text Typography */}
+        <div className="bg-white rounded-2xl border border-slate-200/60 p-6 shadow-sm shadow-slate-100 lg:col-span-2 space-y-4 select-none">
+          <div className="border-b border-slate-100 pb-3">
+            <h3 className="font-sora font-extrabold text-[#1e1b4b] text-base leading-none">
+              Ficha Cadastral
+            </h3>
+            <span className="text-[10px] uppercase font-mono font-extrabold tracking-wider text-indigo-500 mt-1.5 block">
+              Dados Civis & Diversidade Estatística
+            </span>
+          </div>
+
+          {/* Detailed key-value database mapping */}
+          <div className="space-y-3 pt-1 text-xs font-semibold">
+            
+            {/* CPF */}
+            <div className="flex items-center justify-between py-1 border-b border-slate-50">
+              <span className="text-slate-400 font-medium">CPF Cadastrado</span>
+              <span className="text-slate-800 font-mono text-[11px]">{personalData.cpf}</span>
+            </div>
+
+            {/* Email Principal */}
+            <div className="flex items-center justify-between py-1 border-b border-slate-50">
+              <span className="text-slate-400 font-medium font-sans">E-mail Principal</span>
+              <span className="text-slate-800 font-mono text-[11px] truncate select-all">{personalData.email}</span>
+            </div>
+
+            {/* Email Secundario */}
+            <div className="flex items-center justify-between py-1 border-b border-slate-50">
+              <span className="text-slate-400 font-medium font-sans">E-mail Secundário</span>
+              <span className="text-slate-800 font-mono text-[11px] truncate select-all">{personalData.secondaryEmail}</span>
+            </div>
+
+            {/* Celular / WhatsApp */}
+            <div className="flex items-center justify-between py-1 border-b border-slate-50">
+              <span className="text-slate-400 font-medium font-sans">Telefone Principal (WhatsApp)</span>
+              <div className="flex items-center gap-1.5">
+                <span className="text-indigo-600 font-mono text-[11px] font-bold">{personalData.phone}</span>
+                <a 
+                  href="https://wa.me/5571993918247" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:scale-115 transition-transform duration-300 cursor-pointer inline-flex items-center"
+                  title="Chamar no WhatsApp"
+                >
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a7/2062095_application_chat_communication_logo_whatsapp_icon.svg" 
+                    alt="WhatsApp" 
+                    className="w-3.5 h-3.5 object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </a>
+              </div>
+            </div>
+
+            {/* Celular */}
+            <div className="flex items-center justify-between py-1 border-b border-slate-50">
+              <span className="text-slate-400 font-medium font-sans">Telefone Secundário</span>
+              <span className="text-slate-800 font-mono text-[11px]">{personalData.celular}</span>
+            </div>
+
+            {/* Sexo */}
+            <div className="flex items-center justify-between py-1 border-b border-slate-50">
+              <span className="text-slate-400 font-medium">Gênero & Registro Civil</span>
+              <span className="text-slate-800">{personalData.diversity.sex} ({personalData.diversity.cisTrans})</span>
+            </div>
+
+            {/* Raca/Cor */}
+            <div className="flex items-center justify-between py-1 border-b border-slate-50">
+              <span className="text-slate-400 font-medium">Raça / Cor Autodeclarada</span>
+              <span className="text-slate-800">{personalData.diversity.raceColor}</span>
+            </div>
+
+            {/* Orientação */}
+            <div className="flex items-center justify-between py-1">
+              <span className="text-slate-400 font-medium">Orientação Sexual</span>
+              <span className="text-slate-800">{personalData.diversity.orientation}</span>
+            </div>
+
+          </div>
+
+          <div className="pt-4 border-t border-slate-100 flex flex-col gap-2">
+            <span className="text-[9px] text-slate-400 font-extrabold uppercase tracking-widest font-mono">Idiomas Habilitados</span>
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {personalData.languages.map((lang) => (
+                <div key={lang.language} className="bg-slate-50 text-slate-600 border border-slate-200/60 px-2.5 py-1 rounded-lg text-[10px] font-extrabold font-mono tracking-tight">
+                  {lang.language.toUpperCase()}: {lang.level.toUpperCase()}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  );
+}

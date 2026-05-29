@@ -1,0 +1,91 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+export interface PersonalData {
+  name: string;
+  age: number;
+  birthDate: string;
+  cpf: string;
+  email: string;
+  secondaryEmail: string;
+  phone: string;
+  celular: string;
+  salaryExpectation: string;
+  location: string;
+  country: string;
+  photoUrl?: string;
+  languages: { language: string; level: string }[];
+  diversity: {
+    gender: string;
+    cisTrans: string;
+    sex: string;
+    raceColor: string;
+    orientation: string;
+  };
+}
+
+export interface Experience {
+  id: string;
+  role: string;
+  company: string;
+  description: string;
+  keyActivities: string[];
+  periodStart: string;
+  periodEnd: string;
+  durationMonths: number;
+}
+
+export type SubjectStatus = 'Aprovado' | 'em Curso' | 'a Cursar';
+
+export interface Subject {
+  code: string;
+  name: string;
+  ch: number;
+  media?: number;
+  frequency?: number;
+  status: SubjectStatus;
+  reprovadoAnteriormente?: boolean;
+}
+
+export interface AcademicCourse {
+  id: string;
+  name: string;
+  curriculum: string;
+  classGroup: string;
+  situation: string;
+  expectedConclusion: number;
+  completedHours: number;
+  extraHoursRequired: number;
+  extraHoursCompleted: number;
+  etapas: {
+    etapa: number;
+    subjects: Subject[];
+  }[];
+}
+
+export interface Certificate {
+  id: string;
+  name: string;
+  institution: string;
+  conclusionDate: string;
+  durationHours: number;
+  year: number;
+  category: 'Finanças' | 'Administração' | 'Tecnologia' | 'Comunicação/Pessoal';
+}
+
+export interface SkillItem {
+  name: string;
+  level: 'Iniciante' | 'Intermediário' | 'Avançado' | 'Especialista';
+  progress: number; // For rendering visual sliders
+}
+
+export interface DioAchievement {
+  name: string;
+  badgeUrl: string;
+  category: string;
+  status: 'Desbloqueado' | 'Pendente';
+  indicator: string;
+}
+
